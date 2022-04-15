@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/statisticsFragment"
+        android:title="Statistics"
+        android:icon="@drawable/ic_launcher_foreground"/>
+    <item
+        android:id="@+id/notesFragment"
+        android:title="Notes" />
+    <item
+        android:id="@+id/setupFragment"
+        android:title="Setup" />
+</menu>
