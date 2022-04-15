@@ -17,5 +17,15 @@ class MainActivity : AppCompatActivity() {
             val navHostFragment = findViewById<View>(R.id.navHost)
             navHostFragment.findNavController().navigate(R.id.action_notesFragment_to_setupFragment)
         }
+        findViewById<Button>(R.id.statButton).setOnClickListener {
+            val navHostFragment = findViewById<View>(R.id.navHost)
+            navHostFragment.findNavController().navigate(R.id.action_setupFragment_to_statisticsFragment2)
+
+        }
+        findViewById<Button>(R.id.notesButton).setOnClickListener {
+            val navHostFragment = findViewById<View>(R.id.navHost)
+            navHostFragment.findNavController().navigate(R.id.action_statisticsFragment2_to_notesFragment)
+
+        }
     }
 }

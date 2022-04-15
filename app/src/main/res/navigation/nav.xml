@@ -15,5 +15,20 @@
     <fragment
         android:id="@+id/setupFragment"
         android:name="com.example.starvingnotebook.SetupFragment"
-        android:label="SetupFragment" />
+        android:label="SetupFragment" >
+        <action
+            android:id="@+id/action_setupFragment_to_statisticsFragment2"
+            app:destination="@id/statisticsFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/statisticsFragment2"
+        android:name="com.example.starvingnotebook.StatisticsFragment"
+        android:label="StatisticsFragment" >
+        <action
+            android:id="@+id/action_statisticsFragment2_to_notesFragment"
+            app:destination="@id/notesFragment" />
+        <action
+            android:id="@+id/action_statisticsFragment2_to_setupFragment"
+            app:destination="@id/setupFragment" />
+    </fragment>
 </navigation>
