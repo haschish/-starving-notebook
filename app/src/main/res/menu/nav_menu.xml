@@ -4,11 +4,13 @@
     <item
         android:id="@+id/statisticsFragment"
         android:title="Statistics"
-        android:icon="@drawable/ic_launcher_foreground"/>
+        android:icon="@drawable/icon_calendar"/>
     <item
         android:id="@+id/notesFragment"
-        android:title="Notes" />
+        android:title="Notes"
+        android:icon="@drawable/icon_notes"/>
     <item
         android:id="@+id/setupFragment"
-        android:title="Setup" />
+        android:title="Setup"
+        android:icon="@drawable/icon_settings_sliders"/>
 </menu>

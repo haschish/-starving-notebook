@@ -7,7 +7,7 @@
     <fragment
         android:id="@+id/notesFragment"
         android:name="com.example.starvingnotebook.NotesFragment"
-        tools:layout=""
+
         android:label="NotesFragment" />
     <fragment
         android:id="@+id/setupFragment"
