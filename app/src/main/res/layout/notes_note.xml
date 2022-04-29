@@ -9,11 +9,9 @@
         android:id="@+id/note_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="0dp"
-        android:paddingTop="20dp"
         android:paddingLeft="20dp"
-        android:layout_marginTop="0dp"
-        android:text="Ваша заметка"
+        android:paddingTop="20dp"
+        android:text="Head Line"
         app:layout_constraintBottom_toTopOf="@id/soundView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -73,5 +71,14 @@
         android:text="Date: 02.02.0202"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:text="Note"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/note_text" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

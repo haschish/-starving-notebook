@@ -38,6 +38,10 @@ class NotesAdapter(): RecyclerView.Adapter<NoteViewHolder>() {
             holder.view.findViewById<Slider>(R.id.soundView).visibility = View.GONE
             holder.view.findViewById<Button>(R.id.buttonSlider).visibility = View.GONE
         }
+        if (note.text.isEmpty()) {
+            holder.view.findViewById<TextView>(R.id.note_text).visibility = View.GONE
+        }
+
     }
 
     override fun getItemCount(): Int = data.size

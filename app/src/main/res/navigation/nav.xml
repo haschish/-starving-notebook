@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav"
     app:startDestination="@id/notesFragment">
 
@@ -17,5 +18,10 @@
         android:id="@+id/statisticsFragment"
         android:name="com.example.starvingnotebook.StatisticsFragment"
         android:label="StatisticsFragment" />
+    <fragment
+        android:id="@+id/generateNotesFragment"
+        android:name="com.example.starvingnotebook.generateNotesFragment"
+        android:label="fragment_generate_notes"
+        tools:layout="@layout/fragment_generate_notes" />
 
 </navigation>

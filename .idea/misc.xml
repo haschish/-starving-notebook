@@ -11,11 +11,19 @@
         <entry key="..\:/Users/User/AndroidStudioProjects/Starvingnotebook2/app/src/main/res/menu/nav_menu.xml" value="0.35104166666666664" />
         <entry key="..\:/Users/mobile/AndroidStudioProjects/StarvingNotebook/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.164" />
         <entry key="..\:/Users/mobile/AndroidStudioProjects/StarvingNotebook/app/src/main/res/drawable/ic_launcher_background.xml" value="0.164" />
+        <entry key="..\:/Users/mobile/AndroidStudioProjects/StarvingNotebook/app/src/main/res/drawable/icon_calendar.xml" value="0.2375" />
+        <entry key="..\:/Users/mobile/AndroidStudioProjects/StarvingNotebook/app/src/main/res/drawable/icon_settings.xml" value="0.2375" />
+        <entry key="..\:/Users/mobile/AndroidStudioProjects/StarvingNotebook/app/src/main/res/drawable/icon_settings_active.xml" value="0.2375" />
+        <entry key="..\:/Users/mobile/AndroidStudioProjects/StarvingNotebook/app/src/main/res/drawable/icon_settings_sliders.xml" value="0.2375" />
+        <entry key="..\:/Users/mobile/AndroidStudioProjects/StarvingNotebook/app/src/main/res/drawable/radio.xml" value="0.2375" />
         <entry key="..\:/Users/mobile/AndroidStudioProjects/StarvingNotebook/app/src/main/res/layout/activity_main.xml" value="0.25025641025641027" />
+        <entry key="..\:/Users/mobile/AndroidStudioProjects/StarvingNotebook/app/src/main/res/layout/fragment_generate_notes.xml" value="0.264" />
         <entry key="..\:/Users/mobile/AndroidStudioProjects/StarvingNotebook/app/src/main/res/layout/fragment_notes.xml" value="0.25025641025641027" />
-        <entry key="..\:/Users/mobile/AndroidStudioProjects/StarvingNotebook/app/src/main/res/layout/fragment_setup.xml" value="0.25025641025641027" />
+        <entry key="..\:/Users/mobile/AndroidStudioProjects/StarvingNotebook/app/src/main/res/layout/fragment_setup.xml" value="0.1" />
         <entry key="..\:/Users/mobile/AndroidStudioProjects/StarvingNotebook/app/src/main/res/layout/fragment_statistics.xml" value="0.25025641025641027" />
+        <entry key="..\:/Users/mobile/AndroidStudioProjects/StarvingNotebook/app/src/main/res/layout/notes_note.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/mobile/AndroidStudioProjects/StarvingNotebook/app/src/main/res/menu/nav_menu.xml" value="0.2222222222222222" />
+        <entry key="..\:/Users/mobile/AndroidStudioProjects/StarvingNotebook/app/src/main/res/menu/notes_menu.xml" value="0.25416666666666665" />
       </map>
     </option>
   </component>
