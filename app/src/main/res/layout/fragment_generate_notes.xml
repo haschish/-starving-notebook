@@ -16,30 +16,33 @@
 
     android:hint="Add a note">
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/secondary_orange_light"
-        />
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/secondary_orange_light" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <RadioGroup
-        android:id="@+id/radio"
+        android:id="@+id/radioGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@id/textSetupWeight">
+        app:layout_constraintTop_toBottomOf="@id/textSetupWeight"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
         <RadioButton
-            android:id="@+id/radioButton2"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:button="@drawable/radio"
+            android:id="@+id/radioButton1"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:button="@null"
+
+           android:drawableRight="@drawable/radio_smile_1"
             android:checked="true" />
 
         <RadioButton
-            android:id="@+id/radioButton"
+            android:id="@+id/radioButton2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="R" />
