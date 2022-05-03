@@ -26,6 +26,7 @@
     <RadioGroup
         android:id="@+id/radioGroup"
         android:layout_width="wrap_content"
+
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintTop_toBottomOf="@id/textSetupWeight"
@@ -34,36 +35,56 @@
 
         <RadioButton
             android:id="@+id/radioButton1"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:button="@null"
 
-           android:drawableRight="@drawable/radio_smile_1"
-            android:checked="true" />
+            android:checked="true"
+            android:drawableRight="@drawable/radio_smile_1"
+            android:scaleX="0.4"
+            android:scaleY="0.4"
+            tools:visibility="visible" />
 
         <RadioButton
             android:id="@+id/radioButton2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="R" />
+            android:layout_width="wrap_content"
+            android:layout_height="110dp"
+            android:button="@null"
+
+            android:drawableRight="@drawable/radio_smiling_2"
+            android:scaleX="0.4"
+            android:scaleY="0.4" />
 
         <RadioButton
             android:id="@+id/radioButton3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="R" />
+            android:layout_width="115dp"
+            android:layout_height="110dp"
+            android:drawableRight="@drawable/radio_neutral_3"
+            android:scaleX="0.4"
+            android:scaleY="0.4"
+            android:button="@null"
+            />
 
         <RadioButton
             android:id="@+id/radioButton4"
-            android:layout_width="match_parent"
+            android:layout_width="115dp"
             android:layout_height="wrap_content"
-            android:text="R" />
+            android:drawableRight="@drawable/radio_frowning_4"
+            android:button="@null"
+
+            android:scaleX="0.4"
+            android:scaleY="0.4"/>
 
         <RadioButton
             android:id="@+id/radioButton5"
-            android:layout_width="match_parent"
+            android:layout_width="115dp"
             android:layout_height="wrap_content"
-            android:text="R" />
+            android:drawableRight="@drawable/radio_crying_5"
+            android:button="@null"
+
+            android:scaleX="0.4"
+            android:scaleY="0.4" />
     </RadioGroup>
 
     <Button
@@ -74,7 +95,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radio" />
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
