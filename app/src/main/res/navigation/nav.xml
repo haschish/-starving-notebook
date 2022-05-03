@@ -22,6 +22,6 @@
         android:id="@+id/generateNotesFragment"
         android:name="com.example.starvingnotebook.generateNotesFragment"
         android:label="fragment_generate_notes"
-        tools:layout="@layout/fragment_generate_notes" />
+        tools:layout="@layout/fragment_add_notes" />
 
 </navigation>
