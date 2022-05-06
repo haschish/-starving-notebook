@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.NavigationUI
 import androidx.recyclerview.widget.RecyclerView
@@ -16,10 +17,13 @@ class NotesFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
+        val viewModel = ViewModelProvider(requireActivity()).get(AppViewModel::class.java)
 
 
         val view = inflater.inflate(R.layout.fragment_notes, container, false)
-        view.findViewById<RecyclerView>(R.id.recyclerViewNotes).adapter = NotesAdapter()
+        val adapter = NotesAdapter()
+        view.findViewById<RecyclerView>(R.id.recyclerViewNotes).adapter = adapter
+        adapter.data = viewModel.notes
 
         setHasOptionsMenu(true)
         return view

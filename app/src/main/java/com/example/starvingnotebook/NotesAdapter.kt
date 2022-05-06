@@ -16,7 +16,7 @@ class NoteViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
 
 class NotesAdapter(): RecyclerView.Adapter<NoteViewHolder>() {
 
-    var data = listOf<Note>(Note("note 1"), Note("note 2"), Note("note 3"))
+    var data = listOf<Note>()
         set(value) {
             field = value
             notifyDataSetChanged()

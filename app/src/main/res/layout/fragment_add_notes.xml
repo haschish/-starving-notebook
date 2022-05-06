@@ -8,25 +8,23 @@
 
     <com.google.android.material.textfield.TextInputLayout
         app:layout_constraintTop_toTopOf="parent"
-    android:id="@+id/textSetupWeight"
-    android:layout_width="match_parent"
-    android:layout_height="200dp"
-    android:padding="10dp"
-
-
-    android:hint="Add a note">
+        android:id="@+id/textSetupWeight"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:padding="10dp"
+        android:hint="Add a note">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/addNoteText"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/secondary_orange_light" />
+            />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <RadioGroup
         android:id="@+id/radioGroup"
         android:layout_width="wrap_content"
-
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintTop_toBottomOf="@id/textSetupWeight"
@@ -34,20 +32,21 @@
         app:layout_constraintEnd_toEndOf="parent">
 
         <RadioButton
-            android:id="@+id/radioButton1"
-
+            android:id="@+id/radioButtonGrin"
+            android:padding="0dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:button="@null"
 
             android:checked="true"
             android:drawableRight="@drawable/radio_smile_1"
-            android:scaleX="0.4"
-            android:scaleY="0.4"
+            android:gravity="center"
+            android:scaleX=".5"
+            android:scaleY=".5"
             tools:visibility="visible" />
 
         <RadioButton
-            android:id="@+id/radioButton2"
+            android:id="@+id/radioButtonSmile"
             android:layout_width="wrap_content"
             android:layout_height="110dp"
             android:button="@null"
@@ -57,7 +56,7 @@
             android:scaleY="0.4" />
 
         <RadioButton
-            android:id="@+id/radioButton3"
+            android:id="@+id/radioButtonNeutral"
             android:layout_width="115dp"
             android:layout_height="110dp"
             android:drawableRight="@drawable/radio_neutral_3"
@@ -67,7 +66,7 @@
             />
 
         <RadioButton
-            android:id="@+id/radioButton4"
+            android:id="@+id/radioButtonFrowning"
             android:layout_width="115dp"
             android:layout_height="wrap_content"
             android:drawableRight="@drawable/radio_frowning_4"
@@ -77,7 +76,7 @@
             android:scaleY="0.4"/>
 
         <RadioButton
-            android:id="@+id/radioButton5"
+            android:id="@+id/radioButtonCrying"
             android:layout_width="115dp"
             android:layout_height="wrap_content"
             android:drawableRight="@drawable/radio_crying_5"
@@ -88,7 +87,7 @@
     </RadioGroup>
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/addNoteButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Ok"
