@@ -71,6 +71,17 @@
         android:text="Date: 02.02.0202"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-/>
+
+    <ImageView
+
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+      android:background="@drawable/radio_crying_5"
+        app:layout_constraintEnd_toEndOf="parent"
+android:maxHeight="50dp"
+        android:maxWidth="10dp"/>
+
+    />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
