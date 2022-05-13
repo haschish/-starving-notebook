@@ -3,12 +3,13 @@ package com.example.starvingnotebook
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Adapter
 import android.widget.Button
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.slider.Slider
+import java.text.SimpleDateFormat
+import java.util.*
 
 class NoteViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
 
@@ -30,11 +31,25 @@ class NotesAdapter(): RecyclerView.Adapter<NoteViewHolder>() {
         return NoteViewHolder(view)
     }
 
+    var currentDate: String = SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(Date())
     override fun onBindViewHolder(holder: NoteViewHolder, position: Int) {
         val note = data.get(position)
         holder.view.findViewById<TextView>(R.id.note_text).text = note.text
+        holder.view.findViewById<TextView>(R.id.textDate).text = currentDate.toString()
         if (note.reactionName.equals("grin")) {
-            holder.view.findViewById<View>(R.id.reactionImage).background = R.drawable.face_smiling
+            holder.view.findViewById<View>(R.id.reactionImage).setBackgroundResource(R.drawable.face_smiling)
+        }
+        if (note.reactionName.equals("smile")) {
+            holder.view.findViewById<View>(R.id.reactionImage).setBackgroundResource(R.drawable.smiling_face2)
+        }
+        if (note.reactionName.equals("neutral")) {
+            holder.view.findViewById<View>(R.id.reactionImage).setBackgroundResource(R.drawable.neutral_face3)
+        }
+        if (note.reactionName.equals("frowning")) {
+            holder.view.findViewById<View>(R.id.reactionImage).setBackgroundResource(R.drawable.frowning_face4)
+        }
+        if (note.reactionName.equals("crying")) {
+            holder.view.findViewById<View>(R.id.reactionImage).setBackgroundResource(R.drawable.crying_face5)
         }
 
         if (note.urlSong.isEmpty()) {
