@@ -33,6 +33,9 @@ class NotesAdapter(): RecyclerView.Adapter<NoteViewHolder>() {
     override fun onBindViewHolder(holder: NoteViewHolder, position: Int) {
         val note = data.get(position)
         holder.view.findViewById<TextView>(R.id.note_text).text = note.text
+        if (note.reactionName.equals("grin")) {
+            holder.view.findViewById<View>(R.id.reactionImage).background = R.drawable.face_smiling
+        }
 
         if (note.urlSong.isEmpty()) {
             holder.view.findViewById<Slider>(R.id.soundView).visibility = View.GONE

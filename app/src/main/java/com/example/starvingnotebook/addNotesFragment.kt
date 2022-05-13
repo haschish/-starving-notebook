@@ -44,7 +44,8 @@ class generateNotesFragment : Fragment() {
             else -> ""
         }
 
-        viewModel.addNote(text.toString())
+        viewModel.addNote(text.toString(), reaction)
+
         NavigationUI.navigateUp(findNavController(), null)
     }
 }
