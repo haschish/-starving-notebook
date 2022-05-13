@@ -38,6 +38,12 @@ class NotesAdapter(): RecyclerView.Adapter<NoteViewHolder>() {
             holder.view.findViewById<Slider>(R.id.soundView).visibility = View.GONE
             holder.view.findViewById<Button>(R.id.buttonSlider).visibility = View.GONE
         }
+        if (note.urlVideo.isEmpty()) {
+            holder.view.findViewById<View>(R.id.videoView).visibility = View.GONE
+        }
+        if (note.urlImage.isEmpty()) {
+            holder.view.findViewById<View>(R.id.imageView).visibility = View.GONE
+        }
         if (note.text.isEmpty()) {
             holder.view.findViewById<TextView>(R.id.note_text).visibility = View.GONE
         }
