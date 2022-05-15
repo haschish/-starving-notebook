@@ -35,7 +35,7 @@ class NotesAdapter(): RecyclerView.Adapter<NoteViewHolder>() {
     override fun onBindViewHolder(holder: NoteViewHolder, position: Int) {
         val note = data.get(position)
         holder.view.findViewById<TextView>(R.id.note_text).text = note.text
-        holder.view.findViewById<TextView>(R.id.textDate).text = currentDate.toString()
+        holder.view.findViewById<TextView>(R.id.textDate).text = currentDate
         if (note.reactionName.equals("grin")) {
             holder.view.findViewById<View>(R.id.reactionImage).setBackgroundResource(R.drawable.face_smiling)
         }
