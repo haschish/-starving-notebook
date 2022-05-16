@@ -4,12 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
-    <TextView
+
+    <View
         android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:background="@color/secondary_orange_light"/>
+    android:layout_marginRight="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="2dp"
+    android:background="@color/secondary_orange_light"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/note_text"

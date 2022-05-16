@@ -41,8 +41,8 @@
             android:checked="true"
             android:drawableRight="@drawable/radio_smile_1"
             android:gravity="center"
-            android:scaleX=".5"
-            android:scaleY=".5"
+            android:scaleX=".4"
+            android:scaleY=".4"
             tools:visibility="visible" />
 
         <RadioButton
@@ -70,6 +70,8 @@
             android:layout_width="115dp"
             android:layout_height="wrap_content"
             android:drawableRight="@drawable/radio_frowning_4"
+            android:layout_marginTop="100dp"
+            android:layout_marginStart="-300dp"
             android:button="@null"
 
             android:scaleX="0.4"
@@ -79,6 +81,7 @@
             android:id="@+id/radioButtonCrying"
             android:layout_width="115dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
             android:drawableRight="@drawable/radio_crying_5"
             android:button="@null"
 

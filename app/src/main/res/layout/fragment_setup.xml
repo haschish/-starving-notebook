@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/saveSetupButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="25dp"
@@ -17,7 +17,7 @@
 
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textSetupName"
+        android:id="@+id/textSetupNameUser"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:hint="Name"
@@ -28,6 +28,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputSetupNameUser"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
@@ -39,7 +40,7 @@
         android:layout_marginLeft="10dp"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textSetupName"
+        app:layout_constraintTop_toBottomOf="@+id/textSetupNameUser"
         android:hint="Weight">
 
         <com.google.android.material.textfield.TextInputEditText
