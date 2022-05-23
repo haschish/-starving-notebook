@@ -22,7 +22,6 @@ class generateNotesFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         viewModel = ViewModelProvider(requireActivity()).get(AppViewModel::class.java)
         val view = inflater.inflate(R.layout.fragment_add_notes, container, false)
         editText = view.findViewById<EditText>(R.id.addNoteText)

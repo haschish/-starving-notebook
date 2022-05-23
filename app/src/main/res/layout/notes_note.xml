@@ -23,6 +23,7 @@
         android:paddingBottom="20dp"
         android:textColor="#0E0303"
         android:paddingRight="50dp"
+        android:fontFamily="@font/kalam_light"
 
         android:textSize="16dp"
         android:text="Text"

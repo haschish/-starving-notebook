@@ -11,11 +11,13 @@
         android:id="@+id/textSetupWeight"
         android:layout_width="match_parent"
         android:layout_height="200dp"
+
         android:padding="10dp"
         android:hint="Add a note">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/addNoteText"
+            android:fontFamily="@font/kalam_light"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             />
@@ -26,6 +28,7 @@
         android:id="@+id/radioGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+
         android:orientation="horizontal"
         app:layout_constraintTop_toBottomOf="@id/textSetupWeight"
         app:layout_constraintStart_toStartOf="parent"
@@ -71,7 +74,7 @@
             android:layout_height="wrap_content"
             android:drawableRight="@drawable/radio_frowning_4"
             android:layout_marginTop="100dp"
-            android:layout_marginStart="-300dp"
+            android:layout_marginStart="-290dp"
             android:button="@null"
 
             android:scaleX="0.4"
