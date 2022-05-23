@@ -8,3 +8,4 @@ class Note (val text: String, val reactionName: String = "", val urlSong: String
 // поиграть со шрифтом и датой. дизайн удобнее
 // вьюМодел сделать сохранение
 // БАЗА ДАННЫХ
+// презентация
