@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
+import com.example.starvingnotebook.model.Note
 import com.google.android.material.slider.Slider
 import java.text.SimpleDateFormat
 import java.util.*

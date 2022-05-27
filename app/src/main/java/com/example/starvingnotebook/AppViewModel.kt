@@ -1,14 +1,29 @@
 package com.example.starvingnotebook
 
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
+import android.app.Application
+import androidx.lifecycle.*
+import com.example.starvingnotebook.model.NoteDatabase
+import com.example.starvingnotebook.model.NotesRepository
+import com.example.starvingnotebook.model.Note
+import kotlinx.coroutines.launch
 
-class AppViewModel : ViewModel() {
+class AppViewModel(application: Application) : AndroidViewModel(application) {
+    private val database = NoteDatabase.getDatabase(application)
+    private val repository = NotesRepository(database.noteDao())
+//    val allNotes: LiveData<List<Note>> = repository.getAllNotes()
+    fun insert (note : Note) = {
+        repository.insert(note)
+    }
 
-    val notes = mutableListOf<Note>(Note("It's the first day", "smile"), Note("I don't feel well", "frowning"), Note("The world is wonderful", "grin"))
+    val notes = mutableListOf<Note>(
+        Note(text = "It's the first day", reactionName = "smile"),
+        Note(text = "I don't feel well", reactionName = "frowning"),
+        Note(text = "The world is wonderful", reactionName = "grin")
+    )
 
     fun addNote(text: String, reaction: String) {
-        notes.add(Note(text, reaction))
-
+        repository.insert(Note(text = text, reactionName = reaction))
     }
+
+
 }

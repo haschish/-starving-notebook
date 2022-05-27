@@ -8,16 +8,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.google.android.material.textfield.TextInputEditText
-import com.google.android.material.textfield.TextInputLayout
 
 const val APP_PREFERENCES = "APP_PREFERENCES"
 const val PREF_SETUP_USER_NAME = "PREF_SETUP_USER_NAME"
 const val PREF_SETUP_WEIGHT_USER = "PREF_SETUP_WEIGHT_USER"
 const val PREF_SETUP_HEIGHT_USER = "PREF_SETUP_HEIGHT_USER"
-
 
 class SetupFragment : Fragment() {
 
@@ -29,7 +26,6 @@ class SetupFragment : Fragment() {
     ): View? {
 
         preferences =  requireActivity().getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE)
-
 
         val view = inflater.inflate(R.layout.fragment_setup, container, false)
 
