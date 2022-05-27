@@ -16,6 +16,7 @@ import com.google.android.material.textfield.TextInputLayout
 const val APP_PREFERENCES = "APP_PREFERENCES"
 const val PREF_SETUP_USER_NAME = "PREF_SETUP_USER_NAME"
 const val PREF_SETUP_WEIGHT_USER = "PREF_SETUP_WEIGHT_USER"
+const val PREF_SETUP_HEIGHT_USER = "PREF_SETUP_HEIGHT_USER"
 
 
 class SetupFragment : Fragment() {
@@ -36,14 +37,17 @@ class SetupFragment : Fragment() {
             PREF_SETUP_USER_NAME, ""))
         view.findViewById<TextInputEditText>(R.id.inputSetupWeightUser).setText(preferences.getString(
             PREF_SETUP_WEIGHT_USER, ""))
+        view.findViewById<TextInputEditText>(R.id.inputSetupHeightUser).setText(preferences.getString(
+            PREF_SETUP_HEIGHT_USER, ""))
 
         view.findViewById<Button>(R.id.saveSetupButton).setOnClickListener {
             val  valueName = requireView().findViewById<TextInputEditText>(R.id.inputSetupNameUser).text.toString()
             val valueWeight = requireView().findViewById<TextInputEditText>(R.id.inputSetupWeightUser).text.toString()
+            val valueHeight = requireView().findViewById<TextInputEditText>(R.id.inputSetupHeightUser).text.toString()
             preferences.edit()
                 .putString(PREF_SETUP_USER_NAME, valueName)
-                .putString(PREF_SETUP_WEIGHT_USER, valueWeight)1
-
+                .putString(PREF_SETUP_WEIGHT_USER, valueWeight)
+                .putString(PREF_SETUP_HEIGHT_USER, valueHeight)
                 .apply()
         }
         return view
