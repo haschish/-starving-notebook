@@ -42,7 +42,8 @@ class SetupFragment : Fragment() {
             val valueWeight = requireView().findViewById<TextInputEditText>(R.id.inputSetupWeightUser).text.toString()
             preferences.edit()
                 .putString(PREF_SETUP_USER_NAME, valueName)
-                .putString(PREF_SETUP_WEIGHT_USER, valueWeight)
+                .putString(PREF_SETUP_WEIGHT_USER, valueWeight)1
+
                 .apply()
         }
         return view
