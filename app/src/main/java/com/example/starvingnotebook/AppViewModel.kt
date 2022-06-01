@@ -5,12 +5,21 @@ import androidx.lifecycle.*
 import com.example.starvingnotebook.model.NoteDatabase
 import com.example.starvingnotebook.model.NotesRepository
 import com.example.starvingnotebook.model.Note
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class AppViewModel(application: Application) : AndroidViewModel(application) {
-    private val database = NoteDatabase.getDatabase(application)
-    private val repository = NotesRepository(database.noteDao())
-//    val allNotes: LiveData<List<Note>> = repository.getAllNotes()
+//    private val database = NoteDatabase.getDatabase(application)
+    private val repository = NotesRepository(application)
+
+    val allNotes: LiveData<List<Note>> = repository.getAllNotes()
+
+//    init {
+//        viewModelScope.launch(Dispatchers.IO) {
+//            repository.populateDatabase()
+//        }
+//    }
+
     fun insert (note : Note) = {
         repository.insert(note)
     }
@@ -22,7 +31,9 @@ class AppViewModel(application: Application) : AndroidViewModel(application) {
     )
 
     fun addNote(text: String, reaction: String) {
-        repository.insert(Note(text = text, reactionName = reaction))
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.insert(Note(text = text, reactionName = reaction))
+        }
     }
 
 
