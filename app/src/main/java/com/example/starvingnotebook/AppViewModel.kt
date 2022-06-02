@@ -2,6 +2,7 @@ package com.example.starvingnotebook
 
 import android.app.Application
 import androidx.lifecycle.*
+import com.example.starvingnotebook.model.Day
 import com.example.starvingnotebook.model.NoteDatabase
 import com.example.starvingnotebook.model.NotesRepository
 import com.example.starvingnotebook.model.Note
@@ -12,13 +13,18 @@ class AppViewModel(application: Application) : AndroidViewModel(application) {
 //    private val database = NoteDatabase.getDatabase(application)
     private val repository = NotesRepository(application)
 
-    val allNotes: LiveData<List<Note>> = repository.getAllNotes()
+    val allNotes = repository.getAllNotes()
 
-//    init {
-//        viewModelScope.launch(Dispatchers.IO) {
-//            repository.populateDatabase()
-//        }
-//    }
+    val allDays = repository.getAllDays()
+
+    val lastDay = repository.getLastDay()
+
+    init {
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.clear()
+            repository.populateDatabase()
+        }
+    }
 
     fun insert (note : Note) = {
         repository.insert(note)
@@ -33,6 +39,12 @@ class AppViewModel(application: Application) : AndroidViewModel(application) {
     fun addNote(text: String, reaction: String) {
         viewModelScope.launch(Dispatchers.IO) {
             repository.insert(Note(text = text, reactionName = reaction))
+        }
+    }
+
+    fun addDay(day: Day) {
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.insertDay(day)
         }
     }
 

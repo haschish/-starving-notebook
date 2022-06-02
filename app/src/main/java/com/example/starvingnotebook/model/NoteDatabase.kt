@@ -6,10 +6,11 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import kotlinx.coroutines.CoroutineScope
 
-@Database(entities = [Note::class], version = 1)
+@Database(entities = [Note::class, Day::class], version = 1)
 abstract class NoteDatabase : RoomDatabase() {
 
     abstract fun noteDao(): NotesDao
+    abstract fun daysDao(): DaysDao
 
     companion object {
         @Volatile

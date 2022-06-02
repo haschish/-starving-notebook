@@ -12,4 +12,7 @@ interface NotesDao {
 
     @Insert()
     fun insert(note: Note)
+
+    @Query("DELETE FROM notes")
+    fun deleteAll()
 }
